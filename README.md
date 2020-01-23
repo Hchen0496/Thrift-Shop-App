@@ -1,4 +1,4 @@
-# After Cloning the File
+# Thrift Shop App
 
 Please do npm install once you clone the file.
 
