@@ -1,6 +1,6 @@
 # Thrift Shop App
 
-Please do npm install once you clone the file.
+Please do yarn install once you clone the file.
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
@@ -70,5 +70,3 @@ This section has moved here: https://facebook.github.io/create-react-app/docs/de
 ### `yarn build` fails to minify
 
 This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
-# Thrift-Store
-# Thrift-Shop-App
