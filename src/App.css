@@ -1,29 +1,47 @@
-.bg-login div {
-  background-image: url("./img/urban_1.jpg");
-  height: 100vh;
+.bg-login {
+  background: url("./img/urban_1.jpg") fixed no-repeat center;
   background-size: cover;
+  min-height: 100vh;
+  position: relative;
 }
 
-.box-for-login div {
-  background: rgba(7, 1, 12);
-  max-width: 330px;
-  padding: 50px;
-  margin: auto;
-  height: 20%;
+.box-for-login {
+  background-color: rgba(255, 255, 255, 0.5);
+  transform: translate(-50%, -50%);
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  padding: 50px 10px 50px 50px;
+  border-radius: 5px;
+  box-sizing: content-box;
 }
 
-#input-style input {
+.input-style input {
+  border-radius: 20px;
+  border-color: rgba(117, 133, 180, 0.699);
+  text-align: center;
+  padding: 4px 20px;
 }
+
 .input-style button {
   background-color: gray;
   color: white;
-  padding: 5px 20px;
+  border-radius: 20px;
+  padding: 4px 20px;
   margin: 8px 0;
   border: none;
   cursor: pointer;
-  width: 48%;
+  width: 50%;
 }
 
 .input-style a {
+  margin-top: 1px;
   color: white;
+  font: large;
+}
+
+.input-style p {
+  margin-top: 1px;
+  color: white;
+  font-size: 12;
 }

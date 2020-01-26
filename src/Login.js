@@ -15,10 +15,11 @@ export default class Login extends Component {
               placeholder="Password"
               required
             />
-            <br />
-            <button type="submit">Login</button> <br />
-            <a href="#">Forgot Password?</a> <br />
-            <a href="#">New User?</a>
+            <a href="#">Forgot Password?</a>
+            <button type="submit">Login</button>
+            <p>
+              New User? <a href="#">Create an Account!</a>
+            </p>
           </div>
         </div>
       </div>
