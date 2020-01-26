@@ -1,10 +1,9 @@
-import React from 'react'; 
-import '../App.css';
+import React from "react";
+import "../App.css";
 
 const PASSWORD_LENGTH = 8;
 
 class SignUpPage extends React.Component {
-
     state = {
         error: false,
         errorMessage: '',
@@ -53,7 +52,6 @@ class SignUpPage extends React.Component {
 
         }
     }*/
-
     render() {
         if(this.state.success) return true;
         let errorMessage = '';
