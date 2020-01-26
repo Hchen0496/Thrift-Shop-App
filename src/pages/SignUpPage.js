@@ -55,7 +55,15 @@ class SignUpPage extends React.Component {
     }*/
 
     render() {
-        if()
+        if(this.state.success) return true;
+        let errorMessage = '';
+        if (this.state.error) {
+            errorMessage = (
+                <div className="alert alert-danger">
+                    {this.state.errorMessage}
+                </div>
+            );
+        }
         return (
             <div className="bg-sign-up"> {/*Implement first background image*/}
                 <div className="form-inline">    
