@@ -2,6 +2,11 @@
 
 Please do yarn install once you clone the file.
 
+# Important Updates as of 1/26/2020
+- Updated Login and Sign Up Page for Front-End
+- In Progress to connect Front End to Back End
+- please do "npm install --save react-router-dom"
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts

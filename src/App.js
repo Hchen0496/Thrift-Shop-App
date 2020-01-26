@@ -1,7 +1,22 @@
 import React from "react";
-import Login from "./Login";
-import "./App.css";
+import logo from "./logo.svg";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import Login from "./pages/Login";
+import SignUpPage from "./pages/SignUpPage";
 
-export default function App() {
-  return <Login />;
+function App() {
+  return (
+    <Router>
+      <Switch>
+        <Route exact path="/">
+          <Login />
+        </Route>
+        <Route exact path="/SignUpPage">
+          <SignUpPage />
+        </Route>
+      </Switch>
+    </Router>
+  );
 }
+
+export default App;
