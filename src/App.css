@@ -60,7 +60,7 @@
   border-radius: 20px;
   border-color: rgba(117, 133, 180, 0.699);
   text-align: center;
-  padding: 4px 20px;
+  padding: 2px 20px;
 }
 
 .input-style button {
@@ -71,19 +71,19 @@
   margin: 8px 0;
   border: none;
   cursor: pointer;
-  width: 50%;
+  width: 52%;
 }
 
 .input-style link {
   margin-top: 1px;
   color: white;
-  font: large;
+  size: x-small;
 }
 
 .input-style p {
   margin-top: 1px;
   color: white;
-  font-size: 12;
+  font-size: small;
 }
 
 /*Registration Style*/

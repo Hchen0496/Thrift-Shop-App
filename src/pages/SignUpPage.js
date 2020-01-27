@@ -2,7 +2,6 @@ import React from "react";
 import "../App.css";
 
 const PASSWORD_LENGTH = 8;
-
 class SignUpPage extends React.Component {
   state = {
     error: false,
