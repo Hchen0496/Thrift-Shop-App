@@ -3,6 +3,12 @@ import { Link } from "react-router-dom";
 import "../App.css";
 
 export default class Login extends Component {
+  state = {
+    email: "",
+    password: "",
+    error: null
+  };
+
   render() {
     return (
       <div className="bg-login">
@@ -20,6 +26,9 @@ export default class Login extends Component {
             <button type="submit">Login</button>
             <p>
               New User? <Link to="/SignUpPage">Create an Account!</Link>
+            </p>
+            <p>
+              or continue as <Link type="#">guest!</Link>
             </p>
           </div>
         </div>
