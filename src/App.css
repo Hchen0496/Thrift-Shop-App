@@ -111,8 +111,7 @@ input[type="text"] {
 .sign-up-header {
   padding-left: 560px;
   padding-top: 100px;
-  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
-    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   font-size: 40px;
 }
 
@@ -125,3 +124,4 @@ button {
 }
 
 /*Centering text fields*/
+
