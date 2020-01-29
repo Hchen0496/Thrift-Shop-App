@@ -2,6 +2,8 @@
 
 Please do yarn install once you clone the file.
 
+# Important Updates as of 2/1/2020
+
 # Important Updates as of 1/26/2020
 - Updated Login and Sign Up Page for Front-End
 - In Progress to connect Front End to Back End
