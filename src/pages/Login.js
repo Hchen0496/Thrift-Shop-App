@@ -24,7 +24,7 @@ export default class Login extends Component {
             />
             <br />
             <button type="submit">Login</button>
-            <p class="forgot">
+            <p>
               <Link to="#">Forgot Password?</Link> <br />
               New User? <Link to="/SignUpPage">Create an Account!</Link> <br />
               or continue as <Link type="#">guest!</Link>
