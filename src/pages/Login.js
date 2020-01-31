@@ -3,23 +3,31 @@ import { Link } from "react-router-dom";
 import "../App.css";
 
 export default class Login extends Component {
+  state = {
+    email: "",
+    password: "",
+    error: null
+  };
+
   render() {
     return (
       <div className="bg-login">
         <div className="box-for-login">
           <div className="input-style">
-            <input type="email" name="e-mail" placeholder="Email" required />
+            <input type="email" class="email" placeholder="Email" required />
             <br />
             <input
               type="password"
-              name="password"
+              class="passwords"
               placeholder="Password"
               required
             />
-            <Link to="#">Forgot Password?</Link>
+            <br />
             <button type="submit">Login</button>
             <p>
-              New User? <Link to="/SignUpPage">Create an Account!</Link>
+              <Link to="#">Forgot Password?</Link> <br />
+              New User? <Link to="/SignUpPage">Create an Account!</Link> <br />
+              or continue as <Link type="#">guest!</Link>
             </p>
           </div>
         </div>
