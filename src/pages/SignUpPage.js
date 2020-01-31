@@ -1,6 +1,5 @@
 import React from "react";
 import "../App.css";
-
 const PASSWORD_LENGTH = 8;
 
 class SignUpPage extends React.Component {
@@ -110,7 +109,7 @@ class SignUpPage extends React.Component {
                             />
                         </div>
                         <div className="col-lg-12">
-                        <button type="button" class="btn btn-primary">Submit</button>
+                        <button type="button" className="btn btn-primary">Submit</button>
                         </div>         
                     </div>
                 </div>
