@@ -51,6 +51,9 @@ class SignUpPage extends React.Component {
         }
     }*/
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> ec9f5749089b7c6d0bca0874fd276154530cc9ee
     render() {
         if(this.state.success) return true;
         let errorMessage = '';
@@ -115,6 +118,7 @@ class SignUpPage extends React.Component {
                 </div>
             </div>         
         ); 
+<<<<<<< HEAD
 =======
   render() {
     if (this.state.success) return true;
@@ -181,6 +185,8 @@ class SignUpPage extends React.Component {
         </div>
       </div>
     );
+=======
+>>>>>>> ec9f5749089b7c6d0bca0874fd276154530cc9ee
   }
 }
 
