@@ -50,6 +50,10 @@ class SignUpPage extends React.Component {
 
         }
     }*/
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> ec9f5749089b7c6d0bca0874fd276154530cc9ee
     render() {
         if(this.state.success) return true;
         let errorMessage = '';
@@ -114,6 +118,75 @@ class SignUpPage extends React.Component {
                 </div>
             </div>         
         ); 
+<<<<<<< HEAD
+=======
+  render() {
+    if (this.state.success) return true;
+    let errorMessage = "";
+    if (this.state.error) {
+      errorMessage = (
+        <div className="alert alert-danger">{this.state.errorMessage}</div>
+      );
+>>>>>>> master
+    }
+    return (
+      <div className="bg-sign-up">
+        {" "}
+        {/*Implement first background image*/}
+        <div className="form-inline">
+          <div className="row">
+            <div className="sign-up-header">Registration</div>
+            <div className="col-lg-12">
+              <input
+                type="text"
+                className="form-control"
+                placeholder="First Name"
+                onChange={this.fieldChanged("firstName")}
+              />
+            </div>
+            <div className="col-lg-12">
+              <input
+                type="text"
+                className="form-control"
+                placeholder="Last Name"
+                onChange={this.fieldChanged("lastName")}
+              />
+            </div>
+            <div className="col-lg-12">
+              <input
+                type="text"
+                className="form-control"
+                placeholder="Email"
+                onChange={this.fieldChanged("email")}
+              />
+            </div>
+            <div className="col-lg-12">
+              <input
+                type="text"
+                className="form-control"
+                placeholder="password"
+                onChange={this.fieldChanged("firstPassword")}
+              />
+            </div>
+            <div className="col-lg-12">
+              <input
+                type="text"
+                className="form-control"
+                placeholder="Re-enter password"
+                onChange={this.fieldChanged("secondPassword")}
+              />
+            </div>
+            <div className="col-lg-12">
+              <button type="button" class="btn btn-primary">
+                Submit
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    );
+=======
+>>>>>>> ec9f5749089b7c6d0bca0874fd276154530cc9ee
   }
 }
 
