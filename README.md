@@ -26,9 +26,8 @@ Please do yarn install once you clone the file.
 
 ### Please do the following within the api/thrift-shop-app folder (maven folder):
 1. mvn package (build would say success towards the end)
-2. java -cp target/thrift-shop-app-1.0-SNAPSHOT.jar com.thriftshop.app.App
-3. mvn dependency:tree
-4. mvn spring-boot:run
+2. mvn dependency:tree
+3. mvn spring-boot:run
 
 # Important Updates as of 1/26/2020
 - Updated Login and Sign Up Page for Front-End
