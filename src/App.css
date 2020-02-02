@@ -44,7 +44,7 @@
   margin: 20px 0;
   border: none;
   cursor: pointer;
-  width: 63%;
+  width: 61%;
 }
 
 .input-style p {
@@ -53,6 +53,10 @@
   font-size: small;
 }
 
+.input-style h1 {
+  font-size: medium;
+  font-family: fantasy;
+}
 /*Registration Style*/
 .bg-sign-up {
   background: url("./img/sign-up-image.jpg") no-repeat center center fixed;
