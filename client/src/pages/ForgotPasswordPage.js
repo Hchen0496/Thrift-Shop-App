@@ -1,8 +1,9 @@
 import React from "react";
 import { Auth } from "aws-amplify";
 import { Link } from "react-router-dom";
-import {HelpBlock,FormGroup,Glyphicon,FormControl,ControlLabel} from "react-bootstrap";
 import "../App.css";
+import {HelpBlock,FormGroup,Glyphicon,FormControl,ControlLabel} from "react-bootstrap";
+
 
 class ForgotPasswordPage extends React.Component {
     constructor(props) {
@@ -71,9 +72,16 @@ class ForgotPasswordPage extends React.Component {
   };
   renderRequestProgramForm() {
     return (
+      <div className="bg-forgot-password">
+            
+                    
+                        <div className="sign-up-header">
+                          Forgot Password
+                          </div>
+          
       <form onSubmit={this.handleSendProgramClick}>
         <FormGroup bsSize="large" controlId="email">
-          <ControlLabel>Email</ControlLabel>
+          <ControlLabel color="yellow">Email</ControlLabel>
           <FormControl
             autoFocus
             type="email"
@@ -85,6 +93,8 @@ class ForgotPasswordPage extends React.Component {
         <button type="button" className="btn btn-primary">Send</button>
         </section>
         </form>
+        
+        </div>
         );
     }
     renderConfirmationForm() {
