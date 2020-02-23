@@ -56,15 +56,11 @@
 /*Registration Style*/
 .bg-sign-up {
   background: url("./img/sign-up-image.jpg") no-repeat center center fixed;
-  height: 100vh;
-  background-position: center;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-  padding-bottom: 740px;
-  padding-right: 55px;
+  min-height: 100vh;
+  position: relative;
 }
+
+.input-style 
 
 input[type="text"] {
   width: 100%;
@@ -75,14 +71,6 @@ input[type="text"] {
   box-sizing: border-box;
 }
 
-.sign-up-header {
-  padding-left: 560px;
-  padding-top: 100px;
-  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
-    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
-  font-size: 40px;
-}
-
 button {
   width: 100px;
   margin-left: 600px;
@@ -91,4 +79,4 @@ button {
   border-radius: 55px;
 }
 
-/*Centering text fields*/
+

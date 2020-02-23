@@ -8,7 +8,6 @@ import org.springframework.web.bind.annotation.*;
 @RestController
 
 public class ThriftApplication {
-
 	public static void main(String[] args) {
 		SpringApplication.run(ThriftApplication.class, args);
 	}
