@@ -79,4 +79,44 @@ button {
   border-radius: 55px;
 }
 
+/*Centering text fields*/
+
+/*Forgot Password style*/
+.bg-forgot-password {
+  background: url("./img/forgot-password.jpg") no-repeat center center fixed;
+  height: 100vh;
+  background-position: center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  padding-bottom: 740px;
+  padding-right: 55px;
+  color:orange;
+}
+
+input[type="text"] {
+  width: 100%;
+  padding: 0px 15px;
+  margin: 8px 0;
+  margin-left: 550px;
+  margin-top: 50px;
+  box-sizing: border-box;
+}
+
+.forgot-password-header {
+  padding-left: 560px;
+  padding-top: 100px;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  font-size: 40px;
+}
+
+button {
+  width: 100px;
+  margin-left: 600px;
+  margin-top: 30px;
+  background-color: blue;
+  border-radius: 55px;
+}
 
