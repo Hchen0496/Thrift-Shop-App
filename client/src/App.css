@@ -1,0 +1,94 @@
+/*Login Style*/
+.bg-login {
+  background: url("./img/urban_1.jpg") fixed no-repeat center;
+  background-size: cover;
+  min-height: 100vh;
+  position: relative;
+}
+
+.box-for-login {
+  background-color: rgba(255, 255, 255, 0.5);
+  transform: translate(-50%, -50%);
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  border-radius: 20px;
+  box-sizing: content-box;
+  padding: 60px 80px 20px 60px;
+}
+
+.input-style .email {
+  position: fixed;
+  border-radius: 20px;
+  border-color: rgba(117, 133, 180, 0.699);
+  text-align: center;
+  padding: 2px 10px;
+  margin: 2px 0;
+}
+
+.input-style .passwords {
+  position: fixed;
+  border-radius: 20px;
+  border-color: rgba(117, 133, 180, 0.699);
+  text-align: center;
+  padding: 2px 10px;
+  margin: 10px 0;
+}
+
+.input-style button {
+  position: absolute;
+  background-color: gray;
+  color: white;
+  border-radius: 20px;
+  padding: 4px 20px;
+  margin: 20px 0;
+  border: none;
+  cursor: pointer;
+  width: 63%;
+}
+
+.input-style p {
+  margin: 50px 0;
+  color: white;
+  font-size: small;
+}
+
+/*Registration Style*/
+.bg-sign-up {
+  background: url("./img/sign-up-image.jpg") no-repeat center center fixed;
+  height: 100vh;
+  background-position: center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  padding-bottom: 740px;
+  padding-right: 55px;
+}
+
+input[type="text"] {
+  width: 100%;
+  padding: 0px 15px;
+  margin: 8px 0;
+  margin-left: 550px;
+  margin-top: 50px;
+  box-sizing: border-box;
+}
+
+.sign-up-header {
+  padding-left: 560px;
+  padding-top: 100px;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  font-size: 40px;
+}
+
+button {
+  width: 100px;
+  margin-left: 600px;
+  margin-top: 30px;
+  background-color: blue;
+  border-radius: 55px;
+}
+
+/*Centering text fields*/

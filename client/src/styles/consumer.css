@@ -1,0 +1,46 @@
+/*Profile & Account*/
+.bg-profile1 {
+  background-color: white;
+  background-size: cover;
+  min-height: 100vh;
+  position: relative;
+}
+
+.square-Box {
+  background-color: rgba(177, 49, 189, 0.5);
+  transform: translate(-50%, -50%);
+  position: fixed;
+  left: 50%;
+  top: 50%;
+
+  box-sizing: content-box;
+  padding: 350px 750px;
+}
+
+.profile-Box {
+  background-color: white;
+  transform: translate(-50%, -50%);
+  position: fixed;
+  left: 50%;
+  top: 20%;
+  border-radius: 20px;
+  box-sizing: content-box;
+  padding: 100px 100px;
+}
+
+.profile-Info {
+  position: fixed;
+  left: 20%;
+  top: 10%;
+}
+
+.my-Orders {
+  left: 5%;
+  top: 50%;
+  position: fixed;
+  display: table;
+}
+
+.Processing {
+  margin-top: 10px;
+}

@@ -1,0 +1,44 @@
+{
+  "ConsumerInfo": [
+    {
+      "firstName": "Roxanna",
+      "lastName": "Rock",
+      "Age": "21",
+      "Sex": "unknown",
+      "Uses": "Consumer",
+      "Email": "lalaLand@guestmail.com",
+      "Bio": "I love T-shirts, sweatpants and Hoodies!"
+    }
+  ],
+  "CompanyInfo": [
+    {
+      "Name": "Tilted101",
+      "Description": "A Fashion industry that focuses on xyz",
+      "Product1": [
+        {
+          "Name": "Vinegar White Shirt",
+          "PicFront": "N/A",
+          "PicBack": "N/A",
+          "Price": "$29.99",
+          "Type": "T-Shirt",
+          "SizeAva": [
+            {
+              "ExtraSmall": "XS",
+              "small": "S",
+              "large": "L",
+              "ExtraLarge": "XL",
+              "medium": "M"
+            }
+          ],
+          "Color": [
+            {
+              "Red": "Red",
+              "Blue": "Blue",
+              "Black": "Black"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
