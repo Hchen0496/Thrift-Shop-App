@@ -6,14 +6,8 @@ import java.util.Collection;
 
 import com.api.thrift.model.Consumer;
 
-public interface ConsumerDao {     
-    Collection<Consumer> getConsumers();
+import org.springframework.data.jpa.repository.JpaRepository;
 
-    Consumer getConsumerById(Integer consumerId);
-
-    void removeConsumerById(Integer consumerId);
-
-    void updateConsumer(Consumer consumer);
-
-    void insertConsumerToDB(Consumer consumer);
+public interface ConsumerDao extends JpaRepository<Consumer,Integer> {     
+    
 }

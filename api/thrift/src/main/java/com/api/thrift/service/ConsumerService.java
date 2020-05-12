@@ -1,42 +1,46 @@
 package com.api.thrift.service;
 
-import java.util.Collection;
+import java.util.List;
 
-import com.api.thrift.dao.ConsumerDao;
+import com.api.thrift.dao.ConsumerDaoImpl;
 import com.api.thrift.model.Consumer;
 
 import org.springframework.beans.factory.annotation.Autowired;
 //import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Service;
 
-@Service("consumerService")
+@Service
 public class ConsumerService {
     
     @Autowired
-    private ConsumerDao consumerDao;
+    private ConsumerDaoImpl consumerDaoImpl;
  
     /*public ConsumerService(ConsumerDao consumerDao) {
         this.consumerDao = consumerDao;
     }*/
 
-    public Collection<Consumer> getAllConsumers() {
-        return this.consumerDao.getConsumers();
+    public List<Consumer> getAllConsumers() {
+        return this.consumerDaoImpl.listConsumers();
     }
 
-    public Consumer getConsumerById(Integer consumerId) {
-        return this.consumerDao.getConsumerById(consumerId);
+    public Consumer getConsumerById(Integer id) {
+        return this.consumerDaoImpl.getConsumer(id);
     }
 
-    public void removeConsumerById(Integer consumerId) {
-        this.consumerDao.removeConsumerById(consumerId);
+    public Consumer addNewConsumer(Consumer newConsumer) {
+        return this.consumerDaoImpl.addConsumer(newConsumer);
     }
 
-    public void updateConsumer(Consumer consumer) {
-        this.consumerDao.updateConsumer(consumer);
+    public void removeConsumerById(Integer id) {
+        this.consumerDaoImpl.deleteConsumer(id);
     }
 
-    public void insertConsumer(Consumer consumer) {
-        this.consumerDao.insertConsumerToDB(consumer);
+    public Consumer replaceConsumer(Consumer newConsumer, Integer id) {
+        return this.consumerDaoImpl.updateConsumer(newConsumer, id);
+    }
+
+    public void deleteConsumer(Integer id) {
+        this.consumerDaoImpl.deleteConsumer(id);
     }
 }
 

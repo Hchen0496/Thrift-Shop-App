@@ -1,8 +1,14 @@
 package com.api.thrift.model;
 
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+
 public class Consumer {
-     
-    private Integer consumerId;
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private Integer id;
 
     private String firstName;
         
@@ -14,10 +20,10 @@ public class Consumer {
    
     private String password;
 
-    public Consumer( Integer consumerId, String firstName, String lastName, String email, 
+    public Consumer( Integer id, String firstName, String lastName, String email, 
                      String username, 
                      String password) {
-        this.consumerId = consumerId;
+        this.id = id;
         this.firstName = firstName;
         this.lastName = lastName;
         this.email = email;
@@ -26,11 +32,11 @@ public class Consumer {
     }
     
     public Integer getId(){
-        return consumerId;
+        return id;
     }
 
-    public void setId(Integer consumerId) {
-        this.consumerId = consumerId;
+    public void setId(Integer id) {
+        this.id = id;
     }
     
     public String getFirstName() {
