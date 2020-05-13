@@ -54,6 +54,12 @@ export default class SignUpPage extends Component {
     }
     return true;
   }
+  
+  //continue on fetching api
+  signUpUser = (event) => {
+
+  }
+
   //function to check all fields aren't filled in
   render() {
     return (
@@ -104,11 +110,6 @@ export default class SignUpPage extends Component {
               required
             />
             <br />
-              <select class ="user-choice">
-                <option value="0">Male</option>
-                <option value="1">Female</option>
-              </select>
-            <br/>
             <button type="submit" class="button-sign-up">Login</button>
             <p>
               <Link to="#">Forgot Password?</Link> <br />

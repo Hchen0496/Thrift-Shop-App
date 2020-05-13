@@ -1,35 +1,34 @@
 package com.api.thrift.model;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.Table;
 
+@Entity
+@Table(name = "CONSUMERS_TABLE")
 public class Consumer {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Integer id;
 
+    @Column(name = "firstName")
     private String firstName;
-        
+    
+    @Column(name = "lastName")
     private String lastName;
- 
+    
+    @Column(name = "email")
     private String email;
-   
+    
+    @Column(name = "username")
     private String username;
-   
+    
+    @Column(name = "password")
     private String password;
-
-    public Consumer( Integer id, String firstName, String lastName, String email, 
-                     String username, 
-                     String password) {
-        this.id = id;
-        this.firstName = firstName;
-        this.lastName = lastName;
-        this.email = email;
-        this.username = username;
-        this.password = password;
-    }
     
     public Integer getId(){
         return id;
