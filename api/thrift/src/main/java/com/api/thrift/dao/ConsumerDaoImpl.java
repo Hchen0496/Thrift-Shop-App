@@ -1,55 +1,52 @@
 package com.api.thrift.dao;
 
-import java.util.Collection;
+import java.util.List;
 //import java.util.HashMap;
-import java.util.Map;
 
 import com.api.thrift.model.Consumer;
 import com.api.thrift.dao.ConsumerDao;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 //import org.springframework.beans.factory.annotation.Autowired;
 //import org.springframework.beans.factory.annotation.Qualifier;
 
 
 @Component
-public class ConsumerDaoImpl implements ConsumerDao {
+public class ConsumerDaoImpl {
 
-    private Map<Integer, Consumer> consumers;
+    @Autowired
+    private ConsumerDao consumerDao;
 
-    /*@Autowired
-    public ConsumerDataAccessService(Map<Integer,Consumer> consumers){
-        this.consumers = consumers;
-    }*/
-
-    @Override
-    public Collection<Consumer> getConsumers() {
-        return this.consumers.values();
+    public List<Consumer> listConsumers() {
+        return this.consumerDao.findAll();
     }
 
-    @Override
-    public Consumer getConsumerById(Integer consumerId) {
-        return this.consumers.get(consumerId);
+    public Consumer addConsumer(Consumer newConsumer) {
+        return this.consumerDao.save(newConsumer);
     }
 
-    @Override
-    public void removeConsumerById(Integer consumerId) {
-        this.consumers.remove(consumerId);
+    public Consumer getConsumer(Integer id) {
+        return this.consumerDao.findById(id)
+            .orElseThrow();
     }
 
-    @Override
-    public void updateConsumer(Consumer consumer) {
-        Consumer c = consumers.get(consumer.getId());
-        c.setEmail(consumer.getEmail());
-        c.setFirstName(consumer.getFirstName());
-        c.setLastName(consumer.getLastName());
-        c.setUsername(consumer.getUsername());
-        c.setUsername(consumer.getPassword());
+    public Consumer updateConsumer(Consumer newConsumer, Integer id) {
+        return this.consumerDao.findById(id)
+            .map(c -> {
+                c.setFirstName(newConsumer.getFirstName());
+                c.setLastName(newConsumer.getLastName());
+                c.setEmail(newConsumer.getEmail());
+                c.setUsername(newConsumer.getLastName());
+                c.setPassword(newConsumer.getPassword());
+                return this.consumerDao.save(newConsumer);
+            }).orElseGet(() -> {
+                newConsumer.setId(id);
+                return this.consumerDao.save(newConsumer);
+            });
     }
 
-    @Override
-    public void insertConsumerToDB(Consumer consumer) {
-        this.consumers.put(consumer.getId(), consumer);
+    public void deleteConsumer(Integer id) {
+        this.consumerDao.deleteById(id);
     }
- 
 }

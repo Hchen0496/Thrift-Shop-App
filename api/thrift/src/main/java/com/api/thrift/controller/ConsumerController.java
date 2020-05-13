@@ -17,12 +17,12 @@ import org.springframework.web.bind.annotation.RequestMethod;
 @RestController
 public class ConsumerController {
     
-    @Autowired
+    @Autowired  
     private ConsumerService consumerService;
-    
-    /*public ConsumerController(ConsumerService consumerService) {
+
+    public ConsumerController(ConsumerService consumerService) {
         this.consumerService = consumerService;
-    }*/
+    }
 
     @RequestMapping(method=RequestMethod.GET)
     public Collection<Consumer> getAllConsumers() {
@@ -30,22 +30,22 @@ public class ConsumerController {
     }
 
     @RequestMapping(value = "/{id}", method = RequestMethod.GET) 
-    public Consumer getConsumerById(@PathVariable("id") Integer consumerId) {
-        return consumerService.getConsumerById(consumerId);
+    public Consumer getConsumerById(@PathVariable("id") Integer id) {
+        return consumerService.getConsumerById(id);
     }
 
     @RequestMapping(value = "/{id}", method = RequestMethod.DELETE)
-    public void deleteConsumerById(@PathVariable("id") Integer consumerId) {
-        consumerService.removeConsumerById(consumerId);
+    public void deleteConsumerById(@PathVariable("id") Integer id) {
+        consumerService.removeConsumerById(id);
     }
 
     @RequestMapping(method = RequestMethod.PUT, consumes = MediaType.APPLICATION_JSON_VALUE)
-    public void updateConsumerById(@RequestBody Consumer consumer) {
-        consumerService.updateConsumer(consumer);
+    public void updateConsumerById(@RequestBody Consumer newConsumer, @PathVariable("id") Integer id){
+        consumerService.replaceConsumer(newConsumer, id);
     }
 
     @RequestMapping(method = RequestMethod.POST, consumes = MediaType.APPLICATION_JSON_VALUE)
-    public void insertConsumer(@RequestBody Consumer consumer) {
-        consumerService.insertConsumer(consumer);
+    public void insertConsumer(@RequestBody Consumer newConsumer) {
+        consumerService.addNewConsumer(newConsumer);
     }    
 }
