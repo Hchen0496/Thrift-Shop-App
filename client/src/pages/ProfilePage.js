@@ -1,16 +1,19 @@
 import React from "react";
-import {render} from 'react-dom'
-import { View, StyleSheet, Text, Dimensions } from 'react-bootstrap';
+import {render} from 'react-dom';
+import { Link } from "react-router-dom";
+import {Container, Row, Col} from 'react-bootstrap'
+
 import "../App.css";
-class ProfilePage extends React.Component {
-     state ={
-          data: [],
-          filteredData: []
-     };
-    
-     render(){
+
+export default class ProfilePage extends React.Component {   
+       render(){
           return(
-               <div class="container">
+               <Container row>
+                    <Row>
+                         <Col>1 of 1</Col>
+                         </Row>
+                         </Container>
+              /** <div class="container">
                <div class="row">
                     <div class="col-xs-6">
 
@@ -30,14 +33,15 @@ class ProfilePage extends React.Component {
                 </ul>
                 </div>
                 </div>
-               </div>
+               </div>**/
           );
      }
 
-     styles = StyleSheet.create({
+    /**  styles = StyleSheet.create({
           ex:{
                width: Dimensions.get('window').width,
                height: Dimensions.get('window').height
           }
-     })
+     })**/
 }
+

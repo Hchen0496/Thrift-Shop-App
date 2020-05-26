@@ -2,7 +2,7 @@ import React from "react";
 import { Auth } from "aws-amplify";
 import { Link } from "react-router-dom";
 import "../App.css";
-import {HelpBlock,FormGroup,Glyphicon,FormControl,ControlLabel} from "react-bootstrap";
+import {HelpBlock,FormGroup,Glyphicon,FormControl} from "react-bootstrap";
 
 
 class ForgotPasswordPage extends React.Component {

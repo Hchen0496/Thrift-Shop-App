@@ -27,6 +27,7 @@ export default class Login extends Component {
             <p>
               <Link to="/ForgotPasswordPage">Forgot Password?</Link> <br />
               New User? <Link to="/SignUpPage">Create an Account!</Link> <br />
+              <Link to="/ProfilePage">Profile</Link><br/>
               or continue as <Link type="#">guest!</Link>
             </p>
           </div>
