@@ -37,7 +37,6 @@ public class ConsumerDaoImpl {
                 c.setFirstName(newConsumer.getFirstName());
                 c.setLastName(newConsumer.getLastName());
                 c.setEmail(newConsumer.getEmail());
-                c.setUsername(newConsumer.getLastName());
                 c.setPassword(newConsumer.getPassword());
                 return this.consumerDao.save(newConsumer);
             }).orElseGet(() -> {

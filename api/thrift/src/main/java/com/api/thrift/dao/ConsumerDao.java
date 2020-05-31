@@ -2,7 +2,6 @@ package com.api.thrift.dao;
 
 //import org.springframework.stereotype.Repository;
 
-import java.util.Collection;
 
 import com.api.thrift.model.Consumer;
 
