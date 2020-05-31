@@ -4,16 +4,18 @@ import "../App.css";
 
 const PASSWORD_LENGTH = 8;
 
+let errorMessage = '';
+
 export default class SignUpPage extends Component {
   
   state = {
     email: '',
     firstName: '',
     lastName: '',
+    success: false,
     mainPassword: '',
     verifyPassword: '',
-    error: false,
-    errorMessage: '' 
+    error: false,   
   };
 
   fieldChanged = (name) => {
@@ -56,19 +58,62 @@ export default class SignUpPage extends Component {
   }
   
   //continue on fetching api
-  signUpUser = (event) => {
-
+  signUpUser = () => {
+    if(this.validCredentials()) {
+      console.log("valid crentials")
+      fetch("api/thrift/consumer/", {
+        method: 'POST',
+        credentials: 'include',
+        headers: {
+          'Content-Type':'application/json'
+        },
+        body: JSON.stringify({
+          firstName: this.state.firstName,
+          lastName: this.state.lastName,
+          email: this.state.email,
+          password: this.state.mainPassword,
+        }),
+      })
+        .then(res => {
+          if(res.ok) {
+            console.log("res is ok");
+            this.setState({
+              success:true
+            });
+            return res.json();
+          }
+        })
+        .catch(err => {
+          this.setState({
+            error: true,
+            errorMessage: 'There was an error signing you up'
+          });
+        });
+    }
   }
 
   //function to check all fields aren't filled in
   render() {
+    if(this.state.success) {
+      console.log("Redirecting to LoginPage");
+      return <Redirect to="/" />;
+    }
+
+    if(this.state.error) {
+      console.log("printing errorMessage");
+      errorMessage = (
+        <div className="alert-danger" role="alert">
+            {this.state.errorMessage}
+        </div>
+      );
+    }
     return (
       <div className="bg-login">
         <div className="box-for-signup">
           <div className="input-style">
             <input
               type="firstname"
-              class="firstname-signup"
+              className="firstname-signup"
               placeholder="First Name"
               value={this.state.firstName}
               onChange={this.fieldChanged('firstName')} 
@@ -77,24 +122,25 @@ export default class SignUpPage extends Component {
             <br />
             <input
               type="lastname"
-              class="lastname-signup"
+              className="lastname-signup"
               placeholder="Last Name"
-              value = {this.fieldChanged('lastName')}
+              value={this.state.lastName}
+              onChange={this.fieldChanged('lastName')}
               required
             />
             <br />
             <input 
               type="email" 
-              class="email-signup" 
+              className="email-signup" 
               placeholder="Email"
               value={this.state.email}
               onChange={this.fieldChanged('email')} 
               required 
-            />
+            />          
             <br />
             <input
               type="password"
-              class="password-signup"
+              className="password-signup"
               placeholder="Password"
               value={this.state.mainPassword}
               onChange={this.fieldChanged('mainPassword')}
@@ -103,14 +149,14 @@ export default class SignUpPage extends Component {
             <br/>
             <input
               type="password"
-              class="password-check"
+              className="password-check"
               placeholder="Re-enter Password"
               value={this.state.verifyPassword}
               onChange={this.fieldChanged('verifyPassword')}
               required
             />
             <br />
-            <button type="submit" class="button-sign-up">Login</button>
+            <button type="submit" className="button-sign-up" onClick={this.signUpUser}>Create Account</button>
             <p>
               <Link to="#">Forgot Password?</Link> <br />
               Already a user? <Link to="/">Sign in</Link> <br />
