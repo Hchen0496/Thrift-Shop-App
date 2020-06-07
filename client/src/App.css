@@ -98,12 +98,6 @@ input[type="text"] {
   width: 63%;
 }
 
-.user-choice {
-  position: relative;
-  font-family: Arial;
-  margin-left: 0px;
-}
-
 .user-choice select {
   display: none; /*hide original SELECT element: */
 }

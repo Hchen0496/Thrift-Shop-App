@@ -1,13 +1,16 @@
 package com.api.thrift.model;
 
-public class Merchant {
+
+import javax.persistence.Table;
+
+public class Manager {
     private int id;
     private String firstName;
     private String lastName;
     private String email;
     private String password;
 
-    public Merchant(int id, String firstName, String lastName, String email, String password) {
+    public Manager(int id, String firstName, String lastName, String email, String password) {
         this.id = id;
         this.firstName = firstName;
         this.lastName = lastName;
