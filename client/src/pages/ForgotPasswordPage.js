@@ -4,41 +4,30 @@ import { Link } from "react-router-dom";
 import "../App.css";
 import {HelpBlock,FormGroup,Glyphicon,FormControl} from "react-bootstrap";
 
+const PASSWORD_LENGTH = 8;
 
 class ForgotPasswordPage extends React.Component {
-    constructor(props) {
-      super(props);
   
-      this.state = {
-        program: "",
+      state = {
         email: "",
-        password: "",
-        codeSent: false,
+        newPassword: "",
         confirmed: false,
         confirmPassword: "",
-        isConfirming: false,
-        isSendingProgram: false
       };
-    }
-  
-    validateProgramForm() {
+    
+      
+    // create an element (alert) trigger function to send error to user 
+    validateEmail() {
       return this.state.email.length > 0;
     }
   
-    validateResetForm() {
-      return (
-        this.state.program.length > 0 &&
-        this.state.password.length > 0 &&
-        this.state.password === this.state.confirmPassword
-      );
-    }
     handleChange = event => {
         this.setState({
           [event.target.id]: event.target.value
         });
       };
     
-      handleSendProgramClick = async event => {
+     /* handleSendProgramClick = async event => {
         event.preventDefault();
     
         this.setState({ isSendingProgram: true });
@@ -69,7 +58,7 @@ class ForgotPasswordPage extends React.Component {
       alert(e.message);
       this.setState({ isConfirming: false });
     }
-  };
+  }; */
   renderRequestProgramForm() {
     return (
       <div className="bg-forgot-password">
@@ -97,6 +86,8 @@ class ForgotPasswordPage extends React.Component {
         </div>
         );
     }
+
+    //this body should be made on another page (S.N: don't need function with it)
     renderConfirmationForm() {
         return (
           <form onSubmit={this.handleConfirmClick}>
@@ -133,6 +124,8 @@ class ForgotPasswordPage extends React.Component {
             </form>
     );
   }
+
+  //this body can be created in another page(page organization)
   renderSuccessMessage() {
     return (
       <div className="success">
@@ -149,7 +142,9 @@ class ForgotPasswordPage extends React.Component {
 
   render() {
     return (
-      <div className="ResetPassword">
+      //div tag for background image
+        //set up the form for user to enter their email
+      <div className="">
         {!this.state.programSent
           ? this.renderRequestProgramForm()
           : !this.state.confirmed

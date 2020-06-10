@@ -1,7 +1,15 @@
 import React from "react";
 import {render} from 'react-dom';
 import { Link } from "react-router-dom";
-import {Container, Row, Col} from 'react-bootstrap'
+/*import{
+     AppRegistry,
+     StyleSheet,
+     Text,
+     View,
+     Navigator
+} from 'react-native';*/ //You don't need react-native to create this page
+
+import {Container, Row, Col} from 'react-bootstrap';
 
 import "../App.css";
 
