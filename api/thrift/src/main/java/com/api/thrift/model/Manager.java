@@ -1,40 +1,56 @@
 package com.api.thrift.model;
 
-
+// import javax.persistence.CascadeType;
+import javax.persistence.Entity;
+// import javax.persistence.JoinColumn;
+// import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
+@Entity
+@Table(name = "MANAGER")
 public class Manager {
-    private int id;
+    
+    private Long id;
     private String firstName;
     private String lastName;
-    private String email;
-    private String password;
 
-    public Manager(int id, String firstName, String lastName, String email, String password) {
+    private Store store;
+
+    public Manager() {}
+
+    public Manager(Long id, String firstName, String lastName){
         this.id = id;
         this.firstName = firstName;
         this.lastName = lastName;
-        this.email = email;
-        this.password = password;
     }
-    
-    public int getId(){
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+    public Long getId() {
         return id;
+    }
+
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
     }
     public String getFirstName() {
         return firstName;
     }
 
-    
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
+    }
     public String getLastName() {
         return lastName;
     }
 
-    public String getEmail() {
-        return email;
+    // @OneToOne(cascade = CascadeType.ALL)
+    // @JoinColumn(name = "STORE_NAME")
+    public void setStore(Store store) {
+        this.store = store;
     }
-    
-    public String getPassword() {
-        return password;
+    public Store getStore() {
+        return store;
     }
 }

@@ -8,23 +8,23 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "CONSUMERS_TABLE")
+@Table(name = "CONSUMER")
 public class Consumer {
 
-    @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
+    @Id
     private Integer id;
 
-    @Column(name = "firstName")
+    @Column(name = "FIRST_NAME")
     private String firstName;
     
-    @Column(name = "lastName")
+    @Column(name = "LAST_NAME")
     private String lastName;
     
-    @Column(name = "email")
+    @Column(name = "EMAIL")
     private String email;
    
-    @Column(name = "password")
+    @Column(name = "PASSWORD")
     private String password;
     
     public Integer getId(){
