@@ -9,6 +9,9 @@ export default class Login extends Component {
     error: null
   };
 
+  //1rely on email and password to display login
+  //maki
+
   render() {
     return (
       <div className="bg-login">

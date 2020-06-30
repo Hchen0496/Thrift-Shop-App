@@ -2,7 +2,7 @@ package com.api.thrift.service;
 
 import java.util.List;
 
-import com.api.thrift.dao.ConsumerDaoImpl;
+import com.api.thrift.Impl.*;
 import com.api.thrift.model.Consumer;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -15,10 +15,6 @@ public class ConsumerService {
     @Autowired
     private ConsumerDaoImpl consumerDaoImpl;
  
-    /*public ConsumerService(ConsumerDao consumerDao) {
-        this.consumerDao = consumerDao;
-    }*/
-
     public List<Consumer> getAllConsumers() {
         return this.consumerDaoImpl.listConsumers();
     }

@@ -52,5 +52,7 @@ public class ConsumerController {
     public void insertConsumer(@RequestBody Consumer newConsumer) {
         requestTrigger.info("POST request triggered " + newConsumer);
         consumerService.addNewConsumer(newConsumer);
-    }    
+    }
+    
+
 }

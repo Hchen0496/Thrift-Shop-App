@@ -1,16 +1,12 @@
-package com.api.thrift.dao;
+package com.api.thrift.Impl;
 
 import java.util.List;
 //import java.util.HashMap;
 
-import com.api.thrift.model.Consumer;
 import com.api.thrift.dao.ConsumerDao;
-
+import com.api.thrift.model.Consumer;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
-//import org.springframework.beans.factory.annotation.Autowired;
-//import org.springframework.beans.factory.annotation.Qualifier;
-
 
 @Component
 public class ConsumerDaoImpl {
@@ -48,4 +44,7 @@ public class ConsumerDaoImpl {
     public void deleteConsumer(Integer id) {
         this.consumerDao.deleteById(id);
     }
+    //1) get method to match email and password in order to login
+  
+    //2) handle the case where user trys to register under an email already exists
 }

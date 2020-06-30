@@ -1,5 +1,6 @@
 package com.api.thrift.model;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -7,24 +8,33 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "THRIFT_STORES")
+@Table(name = "STORE")
 public class Store {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private int id;
-    
-    private int fid;
+
+    @Column(name = "STORE_NAME")
     private String storeName;
+
+    @Column(name = "ADDRESS")
     private String address;
+
+    @Column(name = "CITY")
     private String city;
+
+    @Column(name = "STATE")
     private String state;
+
+    @Column(name = "ZIP_CODE")
     private int zipCode;
+
+    public Store() {}
 
     public Store(int id, int fid, String storeName, 
             String address, String city, String state,
             int zipCode) {
         this.id = id;
-        this.fid = fid;
         this.storeName = storeName;
         this.address = address;
         this.city = city;
@@ -32,13 +42,11 @@ public class Store {
         this.zipCode = zipCode; 
     }
 
+    
     public int getId() {
         return id;
     }
-    
-    public int getFID() {
-        return fid;
-    }
+
     public String getStoreName() {
         return storeName;
     }
