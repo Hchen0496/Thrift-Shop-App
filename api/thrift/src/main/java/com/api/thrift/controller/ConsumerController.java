@@ -18,22 +18,22 @@ import org.springframework.web.bind.annotation.RequestMethod;
 @RestController
 @RequestMapping
 public class ConsumerController {
-    
+
     Logger requestTrigger = LoggerFactory.getLogger(ConsumerController.class);
 
-    @Autowired  
+    @Autowired
     private ConsumerService consumerService;
 
     public ConsumerController(ConsumerService consumerService) {
         this.consumerService = consumerService;
     }
 
-    @RequestMapping(value = "api/thrift/consumer", method=RequestMethod.GET)
+    @RequestMapping(value = "api/thrift/consumer", method = RequestMethod.GET)
     public Collection<Consumer> getAllConsumers() {
         return consumerService.getAllConsumers();
     }
 
-    @RequestMapping(value = "api/thrift/consumer/{id}", method = RequestMethod.GET) 
+    @RequestMapping(value = "api/thrift/consumer/{id}", method = RequestMethod.GET)
     public Consumer getConsumerById(@PathVariable("id") Integer id) {
         return consumerService.getConsumerById(id);
     }
@@ -44,7 +44,7 @@ public class ConsumerController {
     }
 
     @RequestMapping(method = RequestMethod.PUT, consumes = MediaType.APPLICATION_JSON_VALUE)
-    public void updateConsumerById(@RequestBody Consumer newConsumer, @PathVariable("id") Integer id){
+    public void updateConsumerById(@RequestBody Consumer newConsumer, @PathVariable("id") Integer id) {
         consumerService.replaceConsumer(newConsumer, id);
     }
 
@@ -53,6 +53,5 @@ public class ConsumerController {
         requestTrigger.info("POST request triggered " + newConsumer);
         consumerService.addNewConsumer(newConsumer);
     }
-    
 
 }
