@@ -1,9 +1,15 @@
 import React from "react";
+
+
+//import logo from "./logo.svg";
+
 //import logo from "./logo.svg";
 
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Login from "./pages/Login";
 import SignUpPage from "./pages/SignUpPage";
+import ForgotPasswordPage from "./pages/ForgotPasswordPage";
+
 
 function App() {
   return (
@@ -15,7 +21,12 @@ function App() {
         <Route exact path="/SignUpPage">
           <SignUpPage />
         </Route>
-      </Switch>
+        <Route exact path="/ForgotPasswordPage">
+          <ForgotPasswordPage />
+        </Route>
+       
+        
+    </Switch>
     </Router>
   );
 }
